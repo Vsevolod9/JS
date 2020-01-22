@@ -19,12 +19,7 @@ start();
 let appData = {
     budget: money,
     timeData: time,
-    expenses: {
-        1 : questionOptExpenses,
-        2 : questionOptExpenses,
-        3 : questionOptExpenses
-
-    },
+    expenses: {},
     optionalExpenses: {},
     income: [],
     saveng: true
