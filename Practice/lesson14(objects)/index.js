@@ -1,34 +1,28 @@
 'use strict';
 
-function first(){
-        setTimeout( function(){
-                console.log(1);
-        },
-        500 
-        
-        );
+let options = {                         // создали переменную и в ней объект. В объекте (ключ значение). Например банан это овощ и это все свойства объекта
+        width: 1024,
+        height: 1024,
+        name: 'test'
+};
 
+// console.log(options.width);
+
+options.bool = false;                   // добавляем
+options.colors = {                      // в свойства объекта можно записывать любой тип данных
+        border: 'black',
+        bg: 'red'
+};
+
+delete options.bool;
+
+console.log(options);
+
+for (let key in options) {
+
+        console.log('Свойство ' + key + ' имеет значение ' + options[key]);
 }
 
-function second(){
-        console.log(2);
-}
+console.log(Object.keys(options).length);
 
-first();
-second();
-
-function learnJS(lang, callback) {                       // принимает ланг и колбэк
-         console.log('Я учу ' + lang);
-         callback();                                    // так как мы передали колбэк в аргументы то можно вызвать внутри
-
-}
-
-function done() {
-        console.log('Я прошел 3й урок')  
-}
-
-learnJS("JavaScript", done);
-
-
-
-// если у функции в аргументе друная функция, то это колбэк функция
+// в объект можно записывать и функции объекта, тогда они становятся и метадами
