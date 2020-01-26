@@ -47,11 +47,17 @@
 
 // СОРТИРОВКА
 
-let arr = ['1', '15', '4'],
-        i = arr.sort(compareNum);
+// let arr = ['1', '15', '4'],
+//         i = arr.sort(compareNum);
 
-       function compareNum(a,b) {
-               return a-b;
-       }
+//        function compareNum(a,b) {
+//                return a-b;
+//        }
 
-        console.log(arr);                 
+//         console.log(arr);                 
+
+let arr = [1, 2, 3, 4, 5];
+
+for (let i = 0, i < arr.length; i++) {
+        
+}

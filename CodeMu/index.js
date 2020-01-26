@@ -1,20 +1,18 @@
 'use strict';
 
-// let a = false;
 
-// let a = 'авыф';
-// let b = 'авыф';
+let test = - 1;
 
-var a = 3;
+if (test > 0) {
+    
+    console.log('Верно');
 
-document.write(a + a);
-document.write(a + a);
+} else {
 
-// console.log(-10 / 0);
-
-// alert(a);
+    console.log('Не верно');
+}
 
 
 
 
-// not a number
+
