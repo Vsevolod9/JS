@@ -1,23 +1,11 @@
 'use strict';
 
-let arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
-let day = arr[4];
+let test = 0; // пусть значение переменной равно 0
 
-for ( let i = 0; i < arr.length; i++) {
-
-    if ( i < 4) {
-        document.write(arr[i] + ' ');
-    }
-    
-    if ( i > 4) {
-        document.write(arr[i] + ' ');
-    }
-    
-    if ( i == 5) {
-        document.write('<i> ' + day + ' </i>');
-    }
-
-
+if (test != 0) {
+	console.log('верно');
+} else {
+	console.log('неверно'); // сработает этот alert, так как переменная равна 0
 }
 
 
@@ -27,12 +15,17 @@ for ( let i = 0; i < arr.length; i++) {
 
 
 
+// ______________________________________________________________
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 
-// for (let i = 0; i < arr.length; i++) {
 
-//     document.write(arr[i] + '<p>');
-// };
+
+
+
+
+
 
 
 
