@@ -1,57 +1,71 @@
-let users = [{
-        name: 'name1',
-        active: true,
+'use strict';
+
+let bigData = [{
+        year: 2019,
+        month: 11,
+        day: 20,
+        data: ['массив с данными']
     },
     {
-        name: 'name2',
-        active: false,
+        year: 2019,
+        month: 11,
+        day: 21,
+        data: ['массив с данными']
     },
     {
-        name: 'name3',
-        active: true,
+        year: 2019,
+        month: 12,
+        day: 25,
+        data: ['массив с данными']
     },
     {
-        name: 'name4',
-        active: false,
+        year: 2019,
+        month: 12,
+        day: 26,
+        data: ['массив с данными']
     },
     {
-        name: 'name5',
-        active: true,
+        year: 2020,
+        month: 10,
+        day: 29,
+        data: ['массив с данными']
+    },
+    {
+        year: 2020,
+        month: 10,
+        day: 30,
+        data: ['массив с данными']
+    },
+    {
+        year: 2020,
+        month: 11,
+        day: 19,
+        data: ['массив с данными']
+    },
+    {
+        year: 2020,
+        month: 11,
+        day: 20,
+        data: ['массив с данными']
     },
 ];
 
+let result = {};
 
-let newArr = [];
+for (let card of bigData) {
 
-changeValue(true, 1, users);
+    if (result[card.year] == undefined) {
+        result[card.year] = {};
 
-function changeValue(value, userNumber, nameOfArr) {
-
-    nameOfArr[userNumber].active = value;
-
-    for (let person of users) {
-        newArr.push(person);
     }
+
+    if (result[card.year][card.month] == undefined) {
+        result[card.year][card.month] = {};
+
+    }
+   
+    result[card.year][card.month][card.day] = card.data;
+   
 }
 
-console.log('Это новый массив: ', newArr);
-
-
-// for (let card of users) {
-
-
-
-//     }
-
-// console.log(users);
-
-
-
-// if (card.active)  { 
-
-//     card.active = false;
-
-// } else {
-
-//     card.active = true;
-// }
+console.log(result);
