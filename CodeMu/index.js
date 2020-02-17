@@ -1,33 +1,55 @@
 'use strict';
 
-let str = 'abc def';
-
-let result = str.split(' ').reverse().join(' ');
-
-console.log(result); // выведет '54321'
 
 
 
 
+let func = (function () {
+	let num = 1;
 
 
+	return function () {
+		console.log(num);
+		num++;
+
+		if (num == 5) {
+			num = 0;
+		}
+	};
+
+})();
 
 
+func();
+func();
+func();
+func();
+func();
+func();
+func();
+func();
 
+// let b = 1;
 
+// while (b > 0) {
 
-//---------------------
-
-
-// let str1 = 'var_test_text';
-
-// let words1 = str1.split('_');
-
-// for (let i = 1; i < words1.length; i++) {
-	
-// 	words1[i] = words1[i].slice(0, 1).toUpperCase() + words1[i].slice(1);
+// 	if (b <= 5) {
+// 		console.log(b);
+// 	} else {
+// 		console.log('Больше 5');
+// 		b = 0;
+// 	}
+// 	b++;	
 // }
-// let result1 = words1.join('');
-// console.log(result1);
 
 
+
+
+
+
+// func();
+// func();
+// func();
+// func();
+
+// console.log(result);
