@@ -1,44 +1,45 @@
 'use strict';
 
-function func(arr) {
-	console.log(arr.shift()); // выведет 1
-	console.log(arr); // выведет [2, 3] - массив уменьшился
+
+
+
+
+
+
+
+function func(prevPrevNum, prevNum)  {
+
+	let sum = 0;	
 	
-	console.log(arr.shift()); // выведет 2
-	console.log(arr); // выведет [3] - массив уменьшился
+	if (sum <= 10) {
+		let current = prevPrevNum + prevNum;	// prevPrevNum + prevNum
 	
-	console.log(arr.shift()); // выведет 3
-	console.log(arr); // выведет [] - массив пуст
+		prevPrevNum = prevNum;				//prevPrevNum = prevNum
+		prevNum = current;			// prevNum = current
+		
+		console.log(current);
+	}
+
+	return sum;
 }
-
-func([1, 2, 3]);
-
-// -----------------------------------
-
-// function alternate(arr, callback1, callback2) {
-// 	let result = [];
-// 	let i = 0;
-
-// 	for (let elem of arr) {
-
 	
-// 		result.push(callback1(elem));
-
-// 	}
-
-// 	return result;
-// }
+func(3, 4);
+	
 
 
-// let result = alternate(
-// 	['a', 'b', 'c', 'd', 'e'],
-// 	function (elem) {
-// 		return elem + '!';
-// 	},
-// 	function (elem) {
-// 		return elem + '?';
-// 	}
-// );
 
-// console.log(result); // выведет ['a!', 'b?', 'c!', 'd?', 'e!']
 
+
+
+
+	function getSum(arr) {
+		let sum = arr.shift();
+
+		if (arr.length != 0) {
+			sum = sum + getSum(arr);
+		}
+
+		return sum;
+	}
+
+	// console.log(getSum([1, 2, 3]));
